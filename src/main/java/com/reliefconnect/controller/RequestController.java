@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/requests")
-@CrossOrigin("*")
+@CrossOrigin("https://effulgent-haupia-2b6500.netlify.app/")
 public class RequestController {
 
     @Autowired
