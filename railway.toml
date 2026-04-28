@@ -5,4 +5,4 @@ builder = "nixpacks"
 JAVA_VERSION = "17"
 
 [deploy]
-startCommand = "java -jar build/libs/*.jar"
+startCommand = "java -jar $(ls build/libs | grep -v plain)"
