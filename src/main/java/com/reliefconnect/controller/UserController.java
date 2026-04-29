@@ -9,19 +9,31 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin("https://effulgent-haupia-2b6500.netlify.app/")
+@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app") // ✅ FIXED (no trailing slash)
 public class UserController {
 
     @Autowired
     private UserService service;
 
+    // 🔥 CREATE USER
     @PostMapping
     public User create(@RequestBody User user) {
-        return service.save(user);
+        try {
+            return service.save(user);
+        } catch (Exception e) {
+            e.printStackTrace(); // 🔍 helps debug in Railway logs
+            throw e;
+        }
     }
 
+    // 🔥 GET ALL USERS
     @GetMapping
     public List<User> getAll() {
-        return service.getAll();
+        try {
+            return service.getAll();
+        } catch (Exception e) {
+            e.printStackTrace(); // 🔍 THIS WILL SHOW REAL ERROR
+            throw e;
+        }
     }
 }
