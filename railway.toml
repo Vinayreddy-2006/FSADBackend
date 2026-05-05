@@ -2,7 +2,7 @@
 command = "./gradlew build"
 
 [build.env]
-JAVA_VERSION = "17"
+JAVA_VERSION = "21"
 
 [deploy]
 startCommand = "java -jar build/libs/*.jar"
