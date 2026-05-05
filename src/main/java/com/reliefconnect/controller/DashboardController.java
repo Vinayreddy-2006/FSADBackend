@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/dashboard")
-@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app")
+@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app/")
 public class DashboardController {
 
     @Autowired

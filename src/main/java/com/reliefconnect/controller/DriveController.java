@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/drives")
-@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app")
+@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app/")
 public class DriveController {
 
     @Autowired

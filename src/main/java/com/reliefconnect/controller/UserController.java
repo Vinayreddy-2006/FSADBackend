@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app") // ✅ FIXED (no trailing slash)
+@CrossOrigin(origins = "https://effulgent-haupia-2b6500.netlify.app/") 
 public class UserController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class UserController {
         try {
             return service.save(user);
         } catch (Exception e) {
-            e.printStackTrace(); // 🔍 helps debug in Railway logs
+            e.printStackTrace();
             throw e;
         }
     }
@@ -32,7 +32,7 @@ public class UserController {
         try {
             return service.getAll();
         } catch (Exception e) {
-            e.printStackTrace(); // 🔍 THIS WILL SHOW REAL ERROR
+            e.printStackTrace(); 
             throw e;
         }
     }
