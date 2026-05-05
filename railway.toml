@@ -1,8 +1,8 @@
 [build]
-builder = "nixpacks"
+command = "./gradlew build"
 
 [build.env]
 JAVA_VERSION = "17"
 
 [deploy]
-startCommand = "java -jar build/libs/backendreilief-0.0.1-SNAPSHOT.jar"
+startCommand = "java -jar build/libs/*.jar"
